@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try{if(localStorage.getItem("lovix-age")==="1")document.documentElement.classList.add("age-ok")}catch(e){}</script>
+  <title>Privacy · Lovix</title>
+  <meta name="description" content="How Lovix handles the small amount of information the site touches.">
+  <meta name="theme-color" content="#09060f">
+  <link rel="canonical" href="https://lovix.club/privacy/">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/lovix.css">
+</head>
+<body>
+  <div class="gate" role="dialog" aria-modal="true" aria-labelledby="age-title">
+    <div class="gate-card">
+      <p class="kicker">ADULTS ONLY</p>
+      <h2 id="age-title" class="display">Are you 18 or older?</h2>
+      <p>Lovix is an adults-only directory and video library. Enter only if you are at least 18 and it is legal for you to view this material where you live.</p>
+      <div class="gate-actions">
+        <button type="button" class="btn btn-ghost" onclick="location.href='https://www.google.com/'">Leave</button>
+        <button type="button" class="btn btn-solid" onclick="try{localStorage.setItem('lovix-age','1')}catch(e){}document.documentElement.classList.add('age-ok')">Enter</button>
+      </div>
+    </div>
+  </div>
+  <div id="site">
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="top">
+      <div class="top-inner">
+        <a class="logo" href="/" aria-label="Lovix home"><svg class="gem" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#g)" d="M12 3.2 18.2 9.2 12 20.8 5.8 9.2Z"/><path fill="#ffe4ef" opacity=".55" d="M5.8 9.2h12.4L12 3.2Z"/><defs><linearGradient id="g" x1="6" y1="3" x2="18" y2="21"><stop stop-color="#ff8aaf"/><stop offset=".55" stop-color="#d7b0ff"/><stop offset="1" stop-color="#f3d2b3"/></linearGradient></defs></svg>Lovix</a>
+        <nav class="nav" aria-label="Primary"><a href="/">Directory</a><a href="/videos/">Library</a></nav>
+      </div>
+    </header>
+    <main id="content" class="measure">
+      <a class="back" href="/">← Back to home</a>
+      <h1 class="display page-title">Privacy</h1>
+      <p class="updated">Last updated: September 29, 2026</p>
+      <div class="stack">
+        <section class="panel"><h2>What this site stores on your device</h2><p>The age check saves a flag in local storage in your browser so you are not asked on every visit. That flag stays on your device. Clearing site data removes it, and the check appears again.</p></section>
+        <section class="panel"><h2>Accounts and payments</h2><p>Lovix does not ask you to create an account to browse the directory or the library. Lovix does not process payments. If you follow a link to another site, that site’s privacy policy applies from the moment you arrive.</p></section>
+        <section class="panel"><h2>Messages you send</h2><p>If you email contact@lovix.club or dmca@lovix.club, we receive whatever you include: your address, the message, and any attachments. We use that only to answer you or to process a copyright notice. We do not sell personal information.</p></section>
+        <section class="panel"><h2>Logs and affiliates</h2><p>The host may keep ordinary server logs, such as IP address, browser type, and the page requested, for security and operations. Some outbound links may tell the destination that you came from Lovix.</p></section>
+        <section class="panel"><h2>Children</h2><p>Lovix is not for anyone under 18. We do not knowingly collect personal information from children.</p></section>
+        <section class="panel"><h2>Contact</h2><p>Privacy questions may be sent to:</p><a class="pill" href="mailto:contact@lovix.club">contact@lovix.club</a></section>
+      </div>
+    </main>
+    <footer class="foot">
+      <nav aria-label="Legal"><a href="/2257/">2257 Statement</a><a href="/dmca/">DMCA</a><a href="/terms/">Terms</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a></nav>
+      <p>© 2026 Lovix. Adults only.</p>
+    </footer>
+  </div>
+</body>
+</html>

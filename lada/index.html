@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try{if(localStorage.getItem("lovix-age")==="1")document.documentElement.classList.add("age-ok")}catch(e){}</script>
+  <title>Lada · Lovix</title>
+  <meta name="description" content="Lada is the first creator on Lovix. Previews, the library, and the exclusive path.">
+  <meta name="rating" content="adult">
+  <meta name="rating" content="RTA-5042-1996-1400-1577-RTA">
+  <meta name="theme-color" content="#09060f">
+  <link rel="canonical" href="https://lovix.club/lada/">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/lovix.css">
+  <link rel="preload" as="image" href="/lada/media/01.jpg">
+</head>
+<body>
+  <div class="gate" role="dialog" aria-modal="true" aria-labelledby="age-title">
+    <div class="gate-card">
+      <p class="kicker">ADULTS ONLY</p>
+      <h2 id="age-title" class="display">Are you 18 or older?</h2>
+      <p>Lovix is an adults-only directory and video library. Enter only if you are at least 18 and it is legal for you to view this material where you live.</p>
+      <div class="gate-actions">
+        <button type="button" class="btn btn-ghost" onclick="location.href='https://www.google.com/'">Leave</button>
+        <button type="button" class="btn btn-solid" onclick="try{localStorage.setItem('lovix-age','1')}catch(e){}document.documentElement.classList.add('age-ok')">Enter</button>
+      </div>
+    </div>
+  </div>
+  <div id="site">
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="top">
+      <div class="top-inner">
+        <a class="logo" href="/" aria-label="Lovix home">
+          <svg class="gem" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#g)" d="M12 3.2 18.2 9.2 12 20.8 5.8 9.2Z"/><path fill="#ffe4ef" opacity=".55" d="M5.8 9.2h12.4L12 3.2Z"/><defs><linearGradient id="g" x1="6" y1="3" x2="18" y2="21"><stop stop-color="#ff8aaf"/><stop offset=".55" stop-color="#d7b0ff"/><stop offset="1" stop-color="#f3d2b3"/></linearGradient></defs></svg>
+          Lovix
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/" aria-current="page">Directory</a>
+          <a href="/videos/">Library</a>
+        </nav>
+      </div>
+    </header>
+    <main id="content" class="narrow">
+      <a class="back" href="/">← Back to home</a>
+      <header class="profile">
+        <span class="mark"><span class="mark-face"><img src="/lada/media/avatar.jpg" alt="" width="640" height="640"></span></span>
+        <div>
+          <div class="name-row">
+            <h1 class="profile-name display">Lada</h1>
+            <span class="verified" role="img" aria-label="Verified">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="m8.2 12.2 2.5 2.5 5.1-5.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <p class="stats"><span>No videos yet</span><span>7 photos</span></p>
+        </div>
+      </header>
+      <div class="reel">
+        <div class="reel-stage">
+        <div class="reel-track" id="reel" tabindex="0" aria-label="Lada previews">
+          <div class="slide"><img src="/lada/media/01.jpg" alt="Lada preview 1" width="582" height="787" fetchpriority="high"></div>
+          <div class="slide"><img src="/lada/media/02.jpg" alt="Lada preview 2" width="582" height="792" loading="lazy"></div>
+          <div class="slide"><img src="/lada/media/03.jpg" alt="Lada preview 3" width="591" height="786" loading="lazy"></div>
+          <div class="slide"><img src="/lada/media/04.jpg" alt="Lada preview 4" width="583" height="789" loading="lazy"></div>
+          <div class="slide"><img src="/lada/media/05.jpg" alt="Lada preview 5" width="591" height="796" loading="lazy"></div>
+          <div class="slide"><img src="/lada/media/06.jpg" alt="Lada preview 6" width="596" height="794" loading="lazy"></div>
+          <div class="slide is-locked">
+            <img src="/lada/media/07.jpg" alt="Locked Lada preview" width="584" height="798" loading="lazy">
+            <span class="lock" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V8a4 4 0 0 1 8 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+        </div>
+        <button class="reel-btn prev" type="button" aria-label="Previous preview" data-dir="-1">‹</button>
+        <button class="reel-btn next" type="button" aria-label="Next preview" data-dir="1">›</button>
+        </div>
+        <div class="dots">
+          <button class="dot" type="button" aria-label="Show preview 1" aria-current="true"><span></span></button>
+          <button class="dot" type="button" aria-label="Show preview 2"><span></span></button>
+          <button class="dot" type="button" aria-label="Show preview 3"><span></span></button>
+          <button class="dot" type="button" aria-label="Show preview 4"><span></span></button>
+          <button class="dot" type="button" aria-label="Show preview 5"><span></span></button>
+          <button class="dot" type="button" aria-label="Show preview 6"><span></span></button>
+          <button class="dot" type="button" aria-label="Show preview 7"><span></span></button>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="action" href="/lada/watch/#premium">
+          <span class="ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V8a4 4 0 0 1 8 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          <span><strong>Exclusive</strong><small>Premium content</small></span>
+          <span class="chev" aria-hidden="true">›</span>
+        </a>
+        <a class="action" href="/lada/watch/">
+          <span class="ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="m10 8.8 5.2 3.2L10 15.2Z" fill="currentColor"/></svg></span>
+          <span><strong>Watch now</strong><small>Library</small></span>
+          <span class="chev" aria-hidden="true">›</span>
+        </a>
+      </div>
+      <p class="copy">Lada is the first creator on Lovix. This page is her public door: a short set of previews, then the library and the exclusive path.</p>
+    </main>
+    <footer class="foot">
+      <nav aria-label="Legal">
+        <a href="/2257/">2257 Statement</a>
+        <a href="/dmca/">DMCA</a>
+        <a href="/terms/">Terms</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+      <p>© 2026 Lovix. Adults only.</p>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var track = document.getElementById("reel");
+      if (!track) return;
+      var slides = track.children;
+      var dots = document.querySelectorAll(".dot");
+      var index = 0;
+      function paint(i) {
+        index = (i + slides.length) % slides.length;
+        dots.forEach(function (dot, n) {
+          if (n === index) dot.setAttribute("aria-current", "true");
+          else dot.removeAttribute("aria-current");
+        });
+      }
+      function go(i) {
+        paint(i);
+        track.scrollTo({ left: slides[index].offsetLeft, behavior: "smooth" });
+      }
+      document.querySelectorAll("[data-dir]").forEach(function (btn) {
+        btn.addEventListener("click", function () { go(index + Number(btn.getAttribute("data-dir"))); });
+      });
+      dots.forEach(function (dot, n) { dot.addEventListener("click", function () { go(n); }); });
+      track.addEventListener("scroll", function () {
+        var next = 0;
+        for (var i = 0; i < slides.length; i++) {
+          if (slides[i].offsetLeft <= track.scrollLeft + track.clientWidth * 0.4) next = i;
+        }
+        paint(next);
+      }, { passive: true });
+      track.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowRight") { event.preventDefault(); go(index + 1); }
+        if (event.key === "ArrowLeft") { event.preventDefault(); go(index - 1); }
+      });
+    })();
+  </script>
+</body>
+</html>
