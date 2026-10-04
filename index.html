@@ -54,16 +54,18 @@
     </header>
     <main id="content" class="wrap">
       <h1 class="sr">Creator directory</h1>
-      <ul class="cards">
-        <li>
-          <a class="card" href="/lada/">
-            <span class="card-bg" aria-hidden="true"><img src="/lada/media/01.jpg" alt="" width="582" height="787"></span>
-            <span class="card-shade" aria-hidden="true"></span>
-            <span class="mark"><span class="mark-face"><img src="/lada/media/avatar.jpg" alt="" width="640" height="640"></span></span>
-            <h2 class="card-name display">Lada</h2>
-          </a>
-        </li>
-      </ul>
+      <ul class="cards" id="directory"></ul>
+      <script src="/js/models.js"></script>
+      <script>
+        (function () {
+          var root = document.getElementById("directory");
+          if (!root || !window.LOVIX_MODELS) return;
+          root.innerHTML = LOVIX_MODELS.map(function (model) {
+            var bg = model.card || (model.slides[0] && model.slides[0].src);
+            return '<li><a class="card" href="/' + model.id + '/"><span class="card-bg" aria-hidden="true"><img src="' + bg + '" alt=""></span><span class="card-shade" aria-hidden="true"></span><span class="mark"><span class="mark-face"><img src="' + model.avatar + '" alt=""></span></span><h2 class="card-name display">' + model.name + "</h2></a></li>";
+          }).join("");
+        })();
+      </script>
     </main>
     <footer class="foot">
       <nav aria-label="Legal">

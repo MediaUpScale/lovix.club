@@ -42,16 +42,15 @@
     <main id="content">
       <header class="library-head wrap">
         <h1 class="display">Library</h1>
-        <p class="lede">Adult video, listed by creator. The shelf starts with Lada and grows as files are published.</p>
+        <p class="lede">Adult video, listed by creator. The shelf grows as files are published.</p>
       </header>
       <form class="search" action="/videos/" method="get">
         <label class="sr" for="q">Search titles</label>
         <input id="q" name="q" maxlength="80" placeholder="Search titles">
         <button type="submit">Search</button>
       </form>
-      <div class="chips">
+      <div class="chips" id="creator-chips">
         <a class="chip" href="/videos/" aria-current="true">All creators</a>
-        <a class="chip" href="/videos/?creator=lada">Lada</a>
       </div>
       <ul class="vgrid" id="library-grid" hidden></ul>
       <section class="panel empty" id="library-empty">
@@ -59,7 +58,7 @@
         <div class="empty-body">
           <h2 id="empty-title" class="display">The shelf is ready</h2>
           <p class="copy">When a clip is published, it shows up in this grid with its creator, length, and tags.</p>
-          <p><a class="btn btn-solid" href="/lada/">Open Lada</a></p>
+          <p id="empty-open"></p>
         </div>
       </section>
     </main>
@@ -74,6 +73,30 @@
       <p>© 2026 Lovix. Adults only.</p>
     </footer>
   </div>
+  <script src="/js/models.js"></script>
+  <script>
+    (function () {
+      var box = document.getElementById("creator-chips");
+      var open = document.getElementById("empty-open");
+      if (!window.LOVIX_MODELS) return;
+      if (box) {
+        LOVIX_MODELS.forEach(function (model) {
+          var link = document.createElement("a");
+          link.className = "chip";
+          link.href = "/videos/?creator=" + encodeURIComponent(model.id);
+          link.textContent = model.name;
+          box.appendChild(link);
+        });
+      }
+      if (open && LOVIX_MODELS[0]) {
+        var button = document.createElement("a");
+        button.className = "btn btn-solid";
+        button.href = "/" + LOVIX_MODELS[0].id + "/";
+        button.textContent = "Open " + LOVIX_MODELS[0].name;
+        open.appendChild(button);
+      }
+    })();
+  </script>
   <script src="/js/library.js" defer></script>
 </body>
 </html>

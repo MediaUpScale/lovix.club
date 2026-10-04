@@ -13,6 +13,8 @@
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/css/lovix.css">
   <link rel="preload" as="image" href="/lada/media/04.jpg">
+  <script>window.LOVIX_PAGE = "lada";</script>
+  <script src="/js/models.js"></script>
 </head>
 <body>
   <div class="gate" role="dialog" aria-modal="true" aria-labelledby="age-title">
@@ -29,70 +31,37 @@
   <div id="site">
     <a class="skip" href="#content">Skip to content</a>
     <main id="content">
-      <div class="narrow lada-top">
-      <header class="profile">
-        <span class="mark"><span class="mark-face"><img src="/lada/media/avatar.jpg" alt="" width="640" height="640"></span></span>
-        <div>
-          <div class="name-row">
-            <h1 class="profile-name display">Lada</h1>
-            <span class="verified" role="img" aria-label="Verified">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="m8.2 12.2 2.5 2.5 5.1-5.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            </span>
+      <div id="profile-mount"></div>
+      <section class="seal" aria-label="Why Lovix">
+        <div class="seal-card">
+          <div>
+            <h2>The best place to watch amazing creators <em>live</em></h2>
+            <ul class="seal-ticks">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="m10 8.8 5 3.2-5 3.2Z" fill="currentColor"/></svg>Instant Access</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5 5 6.5v5.2c0 4.2 2.8 7.2 7 8.8 4.2-1.6 7-4.6 7-8.8V6.5L12 3.5Z" stroke="currentColor" stroke-width="1.6"/></svg>100% Secure</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 3 6 13h5l-1 8 8-12h-5l0-6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>HD Quality</li>
+            </ul>
           </div>
-          <p class="stats"><span>No videos yet</span><span>7 photos</span></p>
+          <button class="try" type="button">Try it Now</button>
         </div>
-      </header>
-      <div class="reel">
-        <div class="reel-stage">
-        <div class="reel-track" id="reel" tabindex="0" aria-label="Lada previews">
-          <div class="slide"><img src="/lada/media/04.jpg" alt="Lada preview 1" width="583" height="789" fetchpriority="high"></div>
-          <div class="slide"><img src="/lada/media/02.jpg" alt="Lada preview 2" width="582" height="792" loading="lazy"></div>
-          <div class="slide"><img src="/lada/media/01.jpg" alt="Lada preview 3" width="582" height="787" loading="lazy"></div>
-          <div class="slide"><img src="/lada/media/03.jpg" alt="Lada preview 4" width="591" height="786" loading="lazy"></div>
-          <div class="slide"><img src="/lada/media/05.jpg" alt="Lada preview 5" width="591" height="796" loading="lazy"></div>
-          <div class="slide"><img src="/lada/media/06.jpg" alt="Lada preview 6" width="596" height="794" loading="lazy"></div>
-          <div class="slide is-locked">
-            <img src="/lada/media/07.jpg" alt="Locked Lada preview" width="584" height="798" loading="lazy">
-            <span class="lock" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V8a4 4 0 0 1 8 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            </span>
-          </div>
-        </div>
-        </div>
-        <div class="dots">
-          <button class="dot" type="button" aria-label="Show preview 1" aria-current="true"><span></span></button>
-          <button class="dot" type="button" aria-label="Show preview 2"><span></span></button>
-          <button class="dot" type="button" aria-label="Show preview 3"><span></span></button>
-          <button class="dot" type="button" aria-label="Show preview 4"><span></span></button>
-          <button class="dot" type="button" aria-label="Show preview 5"><span></span></button>
-          <button class="dot" type="button" aria-label="Show preview 6"><span></span></button>
-          <button class="dot" type="button" aria-label="Show preview 7"><span></span></button>
-        </div>
-      </div>
-      <div class="actions">
-        <button class="action" type="button">
-          <span class="ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V8a4 4 0 0 1 8 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-          <span><strong>Exclusive</strong><small>Premium content</small></span>
-          <span class="chev" aria-hidden="true">›</span>
-        </button>
-        <button class="action" type="button">
-          <span class="ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="m10 8.8 5.2 3.2L10 15.2Z" fill="currentColor"/></svg></span>
-          <span><strong>Watch now</strong><small>Live</small></span>
-          <span class="chev" aria-hidden="true">›</span>
-        </button>
-      </div>
-      </div>
-      <div class="strip bleed" id="lada-strip">
-        <div class="still"><img src="/lada/media/02.jpg" alt="Lada preview" width="582" height="792"></div>
-        <div class="still"><img src="/lada/media/01.jpg" alt="Lada preview" width="582" height="787" loading="lazy"></div>
-        <div class="still"><img src="/lada/media/03.jpg" alt="Lada preview" width="591" height="786" loading="lazy"></div>
-        <div class="still is-locked">
-          <img src="/lada/media/07.jpg" alt="Locked Lada preview" width="584" height="798" loading="lazy">
-          <span class="lock" aria-hidden="true">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V8a4 4 0 0 1 8 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          </span>
-        </div>
-      </div>
+        <ul class="badges">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5 5 6.5v5.2c0 4.2 2.8 7.2 7 8.8 4.2-1.6 7-4.6 7-8.8V6.5L12 3.5Z" stroke="currentColor" stroke-width="1.6"/></svg>
+            <h3>Verified Creator</h3>
+            <p>Authentic &amp; verified</p>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.2-5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M20 4.5V9h-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Updated Daily</h3>
+            <p>New content every day</p>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V8a4 4 0 0 1 8 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <h3>Private Livestream</h3>
+            <p>100% secure</p>
+          </li>
+        </ul>
+      </section>
     </main>
     <footer class="foot">
       <nav aria-label="Legal">
@@ -109,90 +78,18 @@
     <button class="offer-backdrop" type="button" data-offer-close aria-label="Close"></button>
     <div class="offer-card" role="dialog" aria-modal="true" aria-labelledby="offer-title">
       <button class="offer-x" type="button" data-offer-close aria-label="Close">×</button>
-      <a class="offer-go" href="https://dvaphrh.girlcamshot.com/uyzk5zt?s1=lovix_landing_lada" rel="nofollow sponsored noopener noreferrer">
+      <a class="offer-go" href="#" rel="nofollow sponsored noopener noreferrer">
         <h2 id="offer-title">Join for FREE</h2>
         <ol class="offer-steps">
           <li><span>1</span>Create a free account</li>
           <li><span>2</span>Get free lifetime membership</li>
           <li><span>3</span>Enjoy thousands of models like me</li>
         </ol>
-        <img src="/lada/media/01.jpg" alt="" width="582" height="787">
-        <span class="offer-cta">Join for free</span>
+        <img id="offer-photo" alt="" width="583" height="789">
+        <span class="offer-cta">Join for free <span class="count" id="offer-count">5</span></span>
       </a>
     </div>
   </div>
-  <script>
-    (function () {
-      var offer = document.getElementById("offer");
-      function openOffer() {
-        if (!offer) return;
-        offer.hidden = false;
-      }
-      function closeOffer() {
-        if (!offer) return;
-        offer.hidden = true;
-      }
-      var top = document.querySelector(".lada-top");
-      if (top) {
-        top.addEventListener("click", function (event) {
-          if (event.target.closest(".dot")) return;
-          openOffer();
-        });
-      }
-      var strip = document.getElementById("lada-strip");
-      if (strip) strip.addEventListener("click", openOffer);
-      document.querySelectorAll("[data-offer-close]").forEach(function (el) {
-        el.addEventListener("click", closeOffer);
-      });
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" && offer && !offer.hidden) closeOffer();
-      });
-      var track = document.getElementById("reel");
-      if (!track) return;
-      var slides = track.children;
-      var dots = document.querySelectorAll(".dot");
-      var index = 0;
-      function paint(i) {
-        index = (i + slides.length) % slides.length;
-        dots.forEach(function (dot, n) {
-          if (n === index) dot.setAttribute("aria-current", "true");
-          else dot.removeAttribute("aria-current");
-        });
-      }
-      var pauseScroll = false;
-      function go(i) {
-        paint(i);
-        pauseScroll = true;
-        track.scrollTo({ left: slides[index].offsetLeft, behavior: "smooth" });
-        setTimeout(function () { pauseScroll = false; }, 800);
-      }
-      function randomOther() {
-        if (slides.length < 2) return index;
-        var next = index;
-        while (next === index) next = Math.floor(Math.random() * slides.length);
-        return next;
-      }
-      dots.forEach(function (dot, n) { dot.addEventListener("click", function () { go(n); }); });
-      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        setInterval(function () {
-          if (offer && !offer.hidden) return;
-          go(randomOther());
-        }, 2800);
-      }
-      track.addEventListener("scrollend", function () { pauseScroll = false; }, { passive: true });
-      track.addEventListener("scroll", function () {
-        if (pauseScroll) return;
-        var next = 0;
-        for (var i = 0; i < slides.length; i++) {
-          if (slides[i].offsetLeft <= track.scrollLeft + track.clientWidth * 0.4) next = i;
-        }
-        paint(next);
-      }, { passive: true });
-      track.addEventListener("keydown", function (event) {
-        if (event.key === "ArrowRight") { event.preventDefault(); go(index + 1); }
-        if (event.key === "ArrowLeft") { event.preventDefault(); go(index - 1); }
-      });
-    })();
-  </script>
+  <script src="/js/profile.js"></script>
 </body>
 </html>
