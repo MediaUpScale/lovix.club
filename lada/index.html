@@ -12,7 +12,7 @@
   <link rel="canonical" href="https://lovix.club/lada/">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/css/lovix.css">
-  <link rel="preload" as="image" href="/lada/media/01.jpg">
+  <link rel="preload" as="image" href="/lada/media/04.jpg">
 </head>
 <body>
   <div class="gate" role="dialog" aria-modal="true" aria-labelledby="age-title">
@@ -28,20 +28,8 @@
   </div>
   <div id="site">
     <a class="skip" href="#content">Skip to content</a>
-    <header class="top">
-      <div class="top-inner">
-        <a class="logo" href="/" aria-label="Lovix home">
-          <svg class="gem" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#g)" d="M12 3.2 18.2 9.2 12 20.8 5.8 9.2Z"/><path fill="#ffe4ef" opacity=".55" d="M5.8 9.2h12.4L12 3.2Z"/><defs><linearGradient id="g" x1="6" y1="3" x2="18" y2="21"><stop stop-color="#ff8aaf"/><stop offset=".55" stop-color="#d7b0ff"/><stop offset="1" stop-color="#f3d2b3"/></linearGradient></defs></svg>
-          Lovix
-        </a>
-        <nav class="nav" aria-label="Primary">
-          <a href="/" aria-current="page">Directory</a>
-          <a href="/videos/">Library</a>
-        </nav>
-      </div>
-    </header>
-    <main id="content" class="narrow">
-      <a class="back" href="/">← Back to home</a>
+    <main id="content">
+      <div class="narrow lada-top">
       <header class="profile">
         <span class="mark"><span class="mark-face"><img src="/lada/media/avatar.jpg" alt="" width="640" height="640"></span></span>
         <div>
@@ -57,10 +45,10 @@
       <div class="reel">
         <div class="reel-stage">
         <div class="reel-track" id="reel" tabindex="0" aria-label="Lada previews">
-          <div class="slide"><img src="/lada/media/01.jpg" alt="Lada preview 1" width="582" height="787" fetchpriority="high"></div>
+          <div class="slide"><img src="/lada/media/04.jpg" alt="Lada preview 1" width="583" height="789" fetchpriority="high"></div>
           <div class="slide"><img src="/lada/media/02.jpg" alt="Lada preview 2" width="582" height="792" loading="lazy"></div>
-          <div class="slide"><img src="/lada/media/03.jpg" alt="Lada preview 3" width="591" height="786" loading="lazy"></div>
-          <div class="slide"><img src="/lada/media/04.jpg" alt="Lada preview 4" width="583" height="789" loading="lazy"></div>
+          <div class="slide"><img src="/lada/media/01.jpg" alt="Lada preview 3" width="582" height="787" loading="lazy"></div>
+          <div class="slide"><img src="/lada/media/03.jpg" alt="Lada preview 4" width="591" height="786" loading="lazy"></div>
           <div class="slide"><img src="/lada/media/05.jpg" alt="Lada preview 5" width="591" height="796" loading="lazy"></div>
           <div class="slide"><img src="/lada/media/06.jpg" alt="Lada preview 6" width="596" height="794" loading="lazy"></div>
           <div class="slide is-locked">
@@ -70,8 +58,6 @@
             </span>
           </div>
         </div>
-        <button class="reel-btn prev" type="button" aria-label="Previous preview" data-dir="-1">‹</button>
-        <button class="reel-btn next" type="button" aria-label="Next preview" data-dir="1">›</button>
         </div>
         <div class="dots">
           <button class="dot" type="button" aria-label="Show preview 1" aria-current="true"><span></span></button>
@@ -84,18 +70,29 @@
         </div>
       </div>
       <div class="actions">
-        <a class="action" href="/lada/watch/#premium">
+        <button class="action" type="button">
           <span class="ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V8a4 4 0 0 1 8 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
           <span><strong>Exclusive</strong><small>Premium content</small></span>
           <span class="chev" aria-hidden="true">›</span>
-        </a>
-        <a class="action" href="/lada/watch/">
+        </button>
+        <button class="action" type="button">
           <span class="ico" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="m10 8.8 5.2 3.2L10 15.2Z" fill="currentColor"/></svg></span>
-          <span><strong>Watch now</strong><small>Library</small></span>
+          <span><strong>Watch now</strong><small>Live</small></span>
           <span class="chev" aria-hidden="true">›</span>
-        </a>
+        </button>
       </div>
-      <p class="copy">Lada is the first creator on Lovix. This page is her public door: a short set of previews, then the library and the exclusive path.</p>
+      </div>
+      <div class="strip bleed" id="lada-strip">
+        <div class="still"><img src="/lada/media/02.jpg" alt="Lada preview" width="582" height="792"></div>
+        <div class="still"><img src="/lada/media/01.jpg" alt="Lada preview" width="582" height="787" loading="lazy"></div>
+        <div class="still"><img src="/lada/media/03.jpg" alt="Lada preview" width="591" height="786" loading="lazy"></div>
+        <div class="still is-locked">
+          <img src="/lada/media/07.jpg" alt="Locked Lada preview" width="584" height="798" loading="lazy">
+          <span class="lock" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2.2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V8a4 4 0 0 1 8 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+      </div>
     </main>
     <footer class="foot">
       <nav aria-label="Legal">
@@ -108,8 +105,48 @@
       <p>© 2026 Lovix. Adults only.</p>
     </footer>
   </div>
+  <div id="offer" class="offer" hidden>
+    <button class="offer-backdrop" type="button" data-offer-close aria-label="Close"></button>
+    <div class="offer-card" role="dialog" aria-modal="true" aria-labelledby="offer-title">
+      <button class="offer-x" type="button" data-offer-close aria-label="Close">×</button>
+      <a class="offer-go" href="https://dvaphrh.girlcamshot.com/uyzk5zt?s1=lovix_landing_lada" rel="nofollow sponsored noopener noreferrer">
+        <h2 id="offer-title">Join for FREE</h2>
+        <ol class="offer-steps">
+          <li><span>1</span>Create a free account</li>
+          <li><span>2</span>Get free lifetime membership</li>
+          <li><span>3</span>Enjoy thousands of models like me</li>
+        </ol>
+        <img src="/lada/media/01.jpg" alt="" width="582" height="787">
+        <span class="offer-cta">Join for free</span>
+      </a>
+    </div>
+  </div>
   <script>
     (function () {
+      var offer = document.getElementById("offer");
+      function openOffer() {
+        if (!offer) return;
+        offer.hidden = false;
+      }
+      function closeOffer() {
+        if (!offer) return;
+        offer.hidden = true;
+      }
+      var top = document.querySelector(".lada-top");
+      if (top) {
+        top.addEventListener("click", function (event) {
+          if (event.target.closest(".dot")) return;
+          openOffer();
+        });
+      }
+      var strip = document.getElementById("lada-strip");
+      if (strip) strip.addEventListener("click", openOffer);
+      document.querySelectorAll("[data-offer-close]").forEach(function (el) {
+        el.addEventListener("click", closeOffer);
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && offer && !offer.hidden) closeOffer();
+      });
       var track = document.getElementById("reel");
       if (!track) return;
       var slides = track.children;
@@ -122,15 +159,29 @@
           else dot.removeAttribute("aria-current");
         });
       }
+      var pauseScroll = false;
       function go(i) {
         paint(i);
+        pauseScroll = true;
         track.scrollTo({ left: slides[index].offsetLeft, behavior: "smooth" });
+        setTimeout(function () { pauseScroll = false; }, 800);
       }
-      document.querySelectorAll("[data-dir]").forEach(function (btn) {
-        btn.addEventListener("click", function () { go(index + Number(btn.getAttribute("data-dir"))); });
-      });
+      function randomOther() {
+        if (slides.length < 2) return index;
+        var next = index;
+        while (next === index) next = Math.floor(Math.random() * slides.length);
+        return next;
+      }
       dots.forEach(function (dot, n) { dot.addEventListener("click", function () { go(n); }); });
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        setInterval(function () {
+          if (offer && !offer.hidden) return;
+          go(randomOther());
+        }, 2800);
+      }
+      track.addEventListener("scrollend", function () { pauseScroll = false; }, { passive: true });
       track.addEventListener("scroll", function () {
+        if (pauseScroll) return;
         var next = 0;
         for (var i = 0; i < slides.length; i++) {
           if (slides[i].offsetLeft <= track.scrollLeft + track.clientWidth * 0.4) next = i;
