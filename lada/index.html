@@ -3,6 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      var path = location.pathname;
+      var lower = path.toLowerCase();
+      if (path === lower) return;
+      if (!/\.[a-z0-9]+$/i.test(lower) && lower.charAt(lower.length - 1) !== "/") lower += "/";
+      location.replace(lower + location.search + location.hash);
+    })();
+  </script>
   <script>try{if(localStorage.getItem("lovix-age")==="1")document.documentElement.classList.add("age-ok")}catch(e){}</script>
   <title>Lada · Lovix</title>
   <meta name="description" content="Lada is the first creator on Lovix. Previews, the library, and the exclusive path.">
