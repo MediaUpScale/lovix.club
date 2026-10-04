@@ -4,13 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-    (function () {
+    function lovixCanonical() {
       var path = location.pathname;
       var lower = path.toLowerCase();
-      if (path === lower) return;
       if (!/\.[a-z0-9]+$/i.test(lower) && lower.charAt(lower.length - 1) !== "/") lower += "/";
-      location.replace(lower + location.search + location.hash);
-    })();
+      if (lower !== path && (lower === "/lada/" || lower.indexOf("/lada/") === 0)) {
+        location.replace(lower + location.search + location.hash);
+        return true;
+      }
+      return false;
+    }
+    function lovixEnter() {
+      try { localStorage.setItem("lovix-age", "1"); } catch (e) {}
+      if (!lovixCanonical()) document.documentElement.classList.add("age-ok");
+    }
+    lovixCanonical();
   </script>
   <script>try{if(localStorage.getItem("lovix-age")==="1")document.documentElement.classList.add("age-ok")}catch(e){}</script>
   <title>Page not found · Lovix</title>
@@ -26,7 +34,7 @@
       <p>Lovix is an adults-only directory and video library. Enter only if you are at least 18 and it is legal for you to view this material where you live.</p>
       <div class="gate-actions">
         <button type="button" class="btn btn-ghost" onclick="location.href='https://www.google.com/'">Leave</button>
-        <button type="button" class="btn btn-solid" onclick="try{localStorage.setItem('lovix-age','1')}catch(e){}document.documentElement.classList.add('age-ok')">Enter</button>
+        <button type="button" class="btn btn-solid" onclick="lovixEnter()">Enter</button>
       </div>
     </div>
   </div>
