@@ -3,7 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>try{if(localStorage.getItem("lovix-age")==="1")document.documentElement.classList.add("age-ok")}catch(e){}</script>
+  <script>
+(function () {
+  var path = location.pathname;
+  var lower = path.toLowerCase();
+  if (!/\.[a-z0-9]+$/i.test(lower) && lower.charAt(lower.length - 1) !== "/") lower += "/";
+  if (lower !== path && (lower === "/lada/" || lower.indexOf("/lada/") === 0)) {
+    location.replace(lower + location.search + location.hash);
+    return;
+  }
+  try { if (localStorage.getItem("lovix-age") === "1") document.documentElement.classList.add("age-ok"); } catch (e) {}
+})();
+</script>
+<script>
+function lovixTurnstileOk() {
+  var btn = document.getElementById("age-enter");
+  if (!btn) return;
+  btn.disabled = false;
+  btn.textContent = "Enter";
+}
+</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <title>Library · Lovix</title>
   <meta name="description" content="The Lovix video library. Titles appear here as they are published.">
   <meta name="rating" content="adult">
@@ -15,14 +35,18 @@
 </head>
 <body>
   <div class="gate" role="dialog" aria-modal="true" aria-labelledby="age-title">
-    <div class="gate-card">
-      <p class="kicker">ADULTS ONLY</p>
-      <h2 id="age-title" class="display">Are you 18 or older?</h2>
-      <p>Lovix is an adults-only directory and video library. Enter only if you are at least 18 and it is legal for you to view this material where you live.</p>
-      <div class="gate-actions">
-        <button type="button" class="btn btn-ghost" onclick="location.href='https://www.google.com/'">Leave</button>
-        <button type="button" class="btn btn-solid" onclick="try{localStorage.setItem('lovix-age','1')}catch(e){}document.documentElement.classList.add('age-ok')">Enter</button>
-      </div>
+    <div class="gate-card gate-disclaimer">
+      <h2 id="age-title" class="display">Mature Content Disclaimer!</h2>
+      <p>This site contains adult material. Enter only if you are at least 18 and viewing it is legal where you live.</p>
+      <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="dark" data-callback="lovixTurnstileOk"></div>
+      <button type="button" class="btn btn-solid" id="age-enter" disabled>VERIFYING...</button>
+      <nav class="gate-legal" aria-label="Legal">
+        <a href="/2257/">2257</a>
+        <a href="/dmca/">DMCA</a>
+        <a href="/terms/">Terms</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
     </div>
   </div>
   <div id="site">
@@ -74,29 +98,7 @@
     </footer>
   </div>
   <script src="/js/models.js"></script>
-  <script>
-    (function () {
-      var box = document.getElementById("creator-chips");
-      var open = document.getElementById("empty-open");
-      if (!window.LOVIX_MODELS) return;
-      if (box) {
-        LOVIX_MODELS.forEach(function (model) {
-          var link = document.createElement("a");
-          link.className = "chip";
-          link.href = "/videos/?creator=" + encodeURIComponent(model.id);
-          link.textContent = model.name;
-          box.appendChild(link);
-        });
-      }
-      if (open && LOVIX_MODELS[0]) {
-        var button = document.createElement("a");
-        button.className = "btn btn-solid";
-        button.href = "/" + LOVIX_MODELS[0].id + "/";
-        button.textContent = "Open " + LOVIX_MODELS[0].name;
-        open.appendChild(button);
-      }
-    })();
-  </script>
   <script src="/js/library.js" defer></script>
+  <script src="/js/age.js"></script>
 </body>
 </html>

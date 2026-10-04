@@ -3,7 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>try{if(localStorage.getItem("lovix-age")==="1")document.documentElement.classList.add("age-ok")}catch(e){}</script>
+  <script>
+(function () {
+  var path = location.pathname;
+  var lower = path.toLowerCase();
+  if (!/\.[a-z0-9]+$/i.test(lower) && lower.charAt(lower.length - 1) !== "/") lower += "/";
+  if (lower !== path && (lower === "/lada/" || lower.indexOf("/lada/") === 0)) {
+    location.replace(lower + location.search + location.hash);
+    return;
+  }
+  try { if (localStorage.getItem("lovix-age") === "1") document.documentElement.classList.add("age-ok"); } catch (e) {}
+})();
+</script>
   <title>Lovix — Adult creator directory</title>
   <meta name="description" content="A private directory of independent adult creators. Lada is the first profile on Lovix.">
   <meta name="rating" content="adult">
@@ -78,12 +89,6 @@
       <p>© 2026 Lovix. Adults only.</p>
     </footer>
   </div>
-  <script>
-    document.getElementById("age-enter").addEventListener("click", function () {
-      if (this.disabled) return;
-      try { localStorage.setItem("lovix-age", "1"); } catch (e) {}
-      document.documentElement.classList.add("age-ok");
-    });
-  </script>
+  <script src="/js/age.js"></script>
 </body>
 </html>
