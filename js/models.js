@@ -10,7 +10,8 @@ var LOVIX_MODELS = [
     verified: true,
     avatar: "/lada/media/avatar.jpg",
     card: "/lada/media/01.jpg",
-    affiliate: "https://dvaphrh.girlcamshot.com/uyzk5zt?s1=lovix_landing_lada",
+    // backup: https://dvaphrh.girlcamshot.com/uyzk5zt?s1=lovix_landing_lada
+    affiliate: "https://go.whitetrafsa.com/api/goToTheRoom?tag=girls&action=sb50tokens&userId=2b380f7f4b3bcfb76285c89e8d0e85f6917f16bf8f77977de5f629d9b2214646",
     slides: [
       { src: "/lada/media/04.jpg", w: 583, h: 789 },
       { src: "/lada/media/02.jpg", w: 582, h: 792 },
